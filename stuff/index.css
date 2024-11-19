@@ -1,0 +1,42 @@
+			/* Basic Reset */
+			body, html {
+				margin: 0;
+				padding: 0;
+				height: 100%;
+				width: 100%;
+				overflow: hidden; /* Prevent scrollbars */
+				position: relative;
+			}
+			/* Center the UI elements in the middle of the screen using flexbox */
+			.ui-container {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				z-index: 1;
+				color: white;
+				font-family: Arial, sans-serif;
+				text-align: center;
+			}
+			/* Style the individual UI elements */
+			.button {
+				background-color: rgba(0, 0, 0, 0.5);
+				border: 1px solid white;
+				padding: 10px 20px;
+				cursor: pointer;
+				margin-top: 10px;
+				border-radius: 10px;
+			}
+			.button:hover {
+				color: aliceblue;
+				border: 50px;
+				transition: 0.4s;
+				background-color: rgba(255, 255, 255, 1);
+			}
+			h1 {
+				font-size: 2rem;
+				margin: 0;
+			}
+			button {
+				color: white;
+			}
