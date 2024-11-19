@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Parent Page</title>
+		<link
+			href="jslibrarys\toastify\toastify.min.css"
+			rel="stylesheet"
+		/>
+		<style>
+			/* Basic Reset */
+			body,
+			html {
+				margin: 0;
+				padding: 0;
+				height: 100%;
+				width: 100%;
+				overflow: hidden;
+				/* Prevent scrollbars */
+				position: relative;
+			}
+
+			/* Center the UI elements in the middle of the screen using flexbox */
+			.ui-container {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				z-index: 1;
+				color: white;
+				font-family: Arial, sans-serif;
+				text-align: center;
+			}
+
+			/* Style the individual UI elements */
+			.button {
+				background-color: rgba(0, 0, 0, 0.5);
+				border: 1px solid white;
+				padding: 10px 20px;
+				cursor: pointer;
+				margin-top: 10px;
+				border-radius: 10px;
+			}
+
+			.button:hover {
+				color: aliceblue;
+				border: 50px;
+				transition: 0.4s;
+				background-color: rgba(255, 255, 255, 1);
+			}
+
+			h1 {
+				font-size: 2rem;
+				margin: 0;
+			}
+
+			button {
+				color: white;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<!-- UI Elements Container (Centered in the middle of the screen) -->
+		<div class="ui-container">
+			<div>
+				<h1 id="titletext"></h1>
+				<p id="version" class="hover">version 1.3 (3:03 AM)</p>
+				<h2 class="hover" id="games">games</h2>
+				<a href="games\n-gon-master\index.html"
+					><button
+						class="button"
+						id="ngon"
+					>
+						N-gon
+					</button></a
+				>
+				<a href="games\bssk\index.html"
+					><button
+						class="button"
+						id="bssk"
+					>
+						BSSK
+					</button></a
+				>
+				<a href="games\minekhan.html"
+					><button
+						class="button"
+						id="minekhan"
+					>
+						Mein Kampf
+					</button></a
+				>
+				<a href="games\EaglercraftX_1.8_u37_Offline_Signed (1) (1).html"
+					><button
+						class="button"
+						id="eglcraft"
+					>
+						Eglcrft
+					</button></a
+				>
+				<a href="games/planetesimals-master/index.html"
+					><button
+						class="button"
+						id="plntstmls"
+					>
+						Planetestimals
+					</button></a
+				>
+			</div>
+		</div>
+		<script
+			type="text/javascript"
+			src="jslibrarys\toastify\toastify.js"
+		></script>
+		<script src="jslibrarys\threejs.min.js"></script>
+		<script src="jslibrarys\tippypopper\popper.min.js"></script>
+		<script src="jslibrarys\tippypopper\tippy-bundle.umd.min.js"></script>
+		<script src="jslibrarys\typed.umd.js"></script>
+
+		<script>
+			let titletext = document.getElementById('titletext');
+			Toastify({
+				text: 'freak you Dacen',
+				delay: 1000,
+				duration: 3000,
+				newWindow: false,
+				close: false,
+				gravity: 'top', // `top` or `bottom`
+				position: 'left', // `left`, `center` or `right`
+				stopOnFocus: true, // Prevents dismissing of toast on hover
+				style: {
+					background: 'linear-gradient(to right, #00ffff, #0000ff)',
+				},
+				onClick: function () {}, // Callback after click
+			}).showToast();
+
+			tippy('#ngon', {
+				content: "A fun game where you're a robot that kills shapes.",
+				placement: 'bottom',
+			});
+			tippy('#bssk', {
+				content: "Roblox's Bee Swarm Simulator, but made in HTML5.",
+				placement: 'bottom',
+			});
+			tippy('#minekhan', {
+				content: 'Minecraft but made in HTML5.',
+				placement: 'bottom',
+			});
+			tippy('#eglcraft', {
+				content: 'A heavy minecraft recreation made in HTML5.',
+				placement: 'bottom',
+			});
+			tippy('#plntstmls', {
+				content: 'Asteriods but cooler (made by the ngon creator)',
+				placement: 'bottom',
+			});
+
+			Toastify({
+				gravity: 'bottom', // `top` or `bottom`
+				position: 'right',
+				text: 'Made by Russell',
+				duration: 1000,
+			}).showToast();
+
+			Toastify({
+				gravity: 'bottom', // `top` or `bottom`
+				position: 'right',
+				text: 'Be happy i made this',
+				duration: 1000,
+			}).showToast();
+
+			function checkRandomNumber(threshold) {
+				let randomNum = Math.random() * 100; // Generates a random number between 0 and 100
+				console.log(`Generated random number: ${randomNum}`);
+
+				if (randomNum > threshold) {
+					console.log(`The number ${randomNum} is greater than ${threshold}`);
+					// Your actions go here, e.g., showing typed text or alerts
+					const typed = new Typed('#titletext', {
+						strings: [
+							'<i>Par^100ent</i>^100 Pag^200e',
+							'Dacen sucks',
+							'Its 4am rn.',
+							'And Im still making this.',
+							'Im so tired.',
+							'anyways',
+							'loop?',
+							'nevermind',
+							'i cant sleep',
+							'and i wanted to write more',
+							'skibidi',
+							'rizz',
+							'gyatt',
+							'sigma',
+							'sus',
+							'phonk',
+							'troll face',
+							'homer uchiha',
+							'ok i think thats as much brainrot as i can think of rn',
+		k				],
+						typeSpeed: 50,
+						backSpeed: 70,
+						backDelay: 1000,
+						showCursor: false,
+						 loop: true,
+						 loopCount: Infinity,
+					});
+					version.textContent = 'version 1.31 (5:33 AM)';
+					return true;
+				} else {
+					console.log(
+						`The number ${randomNum} is not greater than ${threshold}`,
+					);
+					const typed = new Typed('#games', {
+						strings: [
+							'Games',
+							'GAM',
+							'Gamm',
+							'Gameee',
+							'Gm',
+							'dacen likes dudes'
+						],
+						typeSpeed: 50,
+						backSpeed: 50,
+						backDelay: 700,
+						showCursor: false,
+						smartBackspace: true,
+						
+					});
+					return false;
+					
+				}
+			}
+
+			// Example usage
+			checkRandomNumber(50); // Checks if the random number is greater than 50
+
+			// Set up basic Three.js scene, camera, and renderer
+			const scene = new THREE.Scene();
+			const camera = new THREE.PerspectiveCamera(
+				75,
+				window.innerWidth / window.innerHeight,
+				0.1,
+				1000,
+			);
+			const renderer = new THREE.WebGLRenderer();
+			renderer.setSize(window.innerWidth, window.innerHeight);
+			document.body.appendChild(renderer.domElement);
+
+			// Create a set of particles to act as the background
+			const particleCount = 5000;
+			const geometry = new THREE.BufferGeometry();
+			const positions = new Float32Array(particleCount * 3);
+
+			// Generate random positions for each particle
+			for (let i = 0; i < particleCount; i++) {
+				positions[i * 3] = (Math.random() - 0.5) * 1000;
+				positions[i * 3 + 1] = (Math.random() - 0.5) * 1000;
+				positions[i * 3 + 2] = (Math.random() - 0.5) * 1000;
+			}
+
+			geometry.setAttribute(
+				'position',
+				new THREE.BufferAttribute(positions, 3),
+			);
+
+			// Create a basic point material (white color with transparency)
+			const material = new THREE.PointsMaterial({
+				color: 0xffffff,
+				size: 0.5,
+				transparent: true,
+				opacity: 0.7,
+			});
+
+			// Create the points system (particles)
+			const particles = new THREE.Points(geometry, material);
+			scene.add(particles);
+
+			// Set up the camera
+			camera.position.z = 500;
+
+			// Handle the mouse movement to create interactivity
+			let mouseX = 0;
+			let mouseY = 0;
+			const targetX = 0;
+			const targetY = 0;
+			const easing = 0.1; // Control the smoothness of the camera movement
+
+			document.addEventListener('mousemove', (event) => {
+				mouseX = (event.clientX / window.innerWidth) * 2 - 1; // Normalize to -1 to 1
+				mouseY = -(event.clientY / window.innerHeight) * 2 + 1; // Normalize to -1 to 1
+			});
+
+			// Resize handler to adjust the canvas size and camera aspect ratio
+			window.addEventListener('resize', () => {
+				renderer.setSize(window.innerWidth, window.innerHeight);
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+			});
+
+			// Animate the scene
+			function animate() {
+				requestAnimationFrame(animate);
+
+				// Smooth camera movement
+				camera.position.x += (mouseX * 100 - camera.position.x) * easing;
+				camera.position.y += (-mouseY * 100 - camera.position.y) * easing;
+				camera.lookAt(scene.position);
+
+				// Rotate the particles slightly for dynamic effect
+				particles.rotation.x += 0.0005;
+				particles.rotation.y += 0.0005;
+
+				// Render the scene
+				renderer.render(scene, camera);
+			}
+
+			animate();
+		</script>
+	</body>
+</html>
